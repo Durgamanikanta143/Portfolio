@@ -1,54 +1,45 @@
-// Smooth Scroll
+// Smooth scrolling
 function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
-  });
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// Typing Effect (Improved)
-const texts = [
-  ".NET Full Stack Developer",
-  "3+ Years Experience",
-  "React Learner",
-  "Problem Solver"
-];
+// Typing effect in hero
+const typingElement = document.querySelector(".typing");
+const texts = [".NET Full Stack Developer", "Backend & Frontend Expert", "Problem Solver"];
+let textIndex = 0;
+let charIndex = 0;
 
-let index = 0;
-let char = 0;
-let isDeleting = false;
-const typing = document.querySelector(".typing");
-
-function type() {
-  let current = texts[index];
-
-  if (isDeleting) {
-    typing.textContent = current.substring(0, char--);
+function typeEffect() {
+  if (charIndex < texts[textIndex].length) {
+    typingElement.textContent += texts[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeEffect, 100);
   } else {
-    typing.textContent = current.substring(0, char++);
+    setTimeout(eraseEffect, 2000);
   }
-
-  if (!isDeleting && char === current.length) {
-    isDeleting = true;
-    setTimeout(type, 1500);
-    return;
-  }
-
-  if (isDeleting && char === 0) {
-    isDeleting = false;
-    index = (index + 1) % texts.length;
-  }
-
-  setTimeout(type, isDeleting ? 50 : 100);
 }
 
-document.addEventListener("DOMContentLoaded", type);
+function eraseEffect() {
+  if (charIndex > 0) {
+    typingElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseEffect, 50);
+  } else {
+    textIndex = (textIndex + 1) % texts.length;
+    setTimeout(typeEffect, 500);
+  }
+}
 
-// Scroll Animation
+document.addEventListener("DOMContentLoaded", () => {
+  if (texts.length) setTimeout(typeEffect, 1000);
+});
+
+// Scroll reveal animation
 window.addEventListener("scroll", () => {
   document.querySelectorAll(".fade-in").forEach(el => {
-    const pos = el.getBoundingClientRect().top;
-    if (pos < window.innerHeight - 50) {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
       el.classList.add("visible");
     }
   });
-});
+}); 
