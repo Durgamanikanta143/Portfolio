@@ -1,6 +1,5 @@
-
-/*Reset*/
-{
+/* Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -210,4 +209,4 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
-} 
+}
