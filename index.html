@@ -3,108 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Durga Manikanta | Portfolio</title>
-
+  <title>DURGA MANIKANTA | Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/4b6e5d6e5b.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Manikanta</div>
+      <ul class="nav-links">
+        <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+        <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+        <li><a href="#skills" onclick="scrollToSection('skills')">Skills</a></li>
+        <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">Manikanta</div>
-    <ul class="nav-links">
-      <li><a onclick="scrollToSection('home')">Home</a></li>
-      <li><a onclick="scrollToSection('about')">About</a></li>
-      <li><a onclick="scrollToSection('skills')">Skills</a></li>
-      <li><a onclick="scrollToSection('projects')">Projects</a></li>
-      <li><a onclick="scrollToSection('contact')">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="highlight">Durga Manikanta</span></h1>
+      <h2 class="typing"></h2>
+      <p>I build modern, scalable, and user-friendly applications.</p>
+      <a href="#contact" class="btn glow">Hire Me</a>
+    </div>
+  </section>
 
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Hello, I'm <span class="highlight">Durga Manikanta</span></h1>
-    <h2 class="typing"></h2>
-
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <h2>About Me</h2>
     <p>
-      3+ years of experience building scalable enterprise applications using 
-      .NET Core, SQL Server, and modern frontend technologies.
+      I am a passionate <b>.NET Full Stack Developer</b> with 3 years of experience
+      in building enterprise applications using C#, ASP.NET Core MVC, SQL Server, and modern frontend technologies.
+      I enjoy solving problems and delivering clean, professional, and responsive solutions.
     </p>
+  </section>
 
-    <a href="#contact" class="btn glow">Hire Me</a>
-  </div>
-</section>
+  <!-- Skills Section -->
+  <section id="skills" class="skills fade-in">
+    <h2>Technical Skills</h2>
 
-<section id="about" class="about fade-in">
-  <h2>About Me</h2>
-  <p>
-    I am a passionate <b>.NET Full Stack Developer</b> with 3+ years of experience.
-    I specialize in building clean, scalable, and high-performance applications.
-    I enjoy solving real-world problems and delivering professional solutions.
-  </p>
-</section>
-
-<section id="skills" class="skills fade-in">
-  <h2>Technical Skills</h2>
-
-  <div class="skills-container">
-    <div class="skill-card">C#</div>
-    <div class="skill-card">ASP.NET Core</div>
-    <div class="skill-card">ADO.NET</div>
-    <div class="skill-card">SQL Server</div>
-    <div class="skill-card">HTML</div>
-    <div class="skill-card">CSS</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">Bootstrap</div>
-    <div class="skill-card">jQuery</div>
-
-    <!-- NEW -->
-    <div class="skill-card">React JS</div>
-    <div class="skill-card">Angular (Basic)</div>
-  </div>
-</section>
-
-<section id="projects" class="projects fade-in">
-  <h2>Projects</h2>
-
-  <div class="project-container">
-
-    <div class="project-card">
-      <h3>Enrollment Letter System</h3>
-      <p>PDF generation + email integration using ASP.NET Core.</p>
+    <div class="skills-category">
+      <h3>Backend</h3>
+      <div class="skills-container">
+        <div class="skill-card"><i class="fas fa-code"></i> C#</div>
+        <div class="skill-card"><i class="fas fa-server"></i> ASP.NET Core MVC</div>
+        <div class="skill-card"><i class="fas fa-database"></i> ADO.NET</div>
+      </div>
     </div>
 
-    <div class="project-card">
-      <h3>Fee Management</h3>
-      <p>Handled large financial data using ADO.NET & SQL.</p>
+    <div class="skills-category">
+      <h3>Frontend</h3>
+      <div class="skills-container">
+        <div class="skill-card"><i class="fab fa-html5"></i> HTML5</div>
+        <div class="skill-card"><i class="fab fa-css3-alt"></i> CSS3</div>
+        <div class="skill-card"><i class="fab fa-js-square"></i> JavaScript</div>
+        <div class="skill-card"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+        <div class="skill-card"><i class="fas fa-code"></i> jQuery</div>
+      </div>
     </div>
 
-    <div class="project-card">
-      <h3>Admit Card Generator</h3>
-      <p>Dynamic report generation with database integration.</p>
+    <div class="skills-category">
+      <h3>Database</h3>
+      <div class="skills-container">
+        <div class="skill-card"><i class="fas fa-database"></i> SQL Server</div>
+        <div class="skill-card"><i class="fas fa-cogs"></i> Stored Procedures</div>
+        <div class="skill-card"><i class="fas fa-project-diagram"></i> Views</div>
+        <div class="skill-card"><i class="fas fa-random"></i> Functions</div>
+      </div>
     </div>
 
-    <div class="project-card">
-      <h3>Question Paper Generator</h3>
-      <p>Automated system with backend logic & data control.</p>
+    <div class="skills-category">
+      <h3>Reporting</h3>
+      <div class="skills-container">
+        <div class="skill-card"><i class="fas fa-file-alt"></i> RDLC Reports</div>
+        <div class="skill-card"><i class="fas fa-chart-bar"></i> Crystal Reports</div>
+      </div>
     </div>
 
-  </div>
-</section>
+    <div class="skills-category">
+      <h3>Tools</h3>
+      <div class="skills-container">
+        <div class="skill-card"><i class="fas fa-laptop-code"></i> Visual Studio</div>
+        <div class="skill-card"><i class="fab fa-git-alt"></i> Git</div>
+        <div class="skill-card"><i class="fas fa-vial"></i> Postman</div>
+      </div>
+    </div>
 
-<section id="contact" class="contact fade-in">
-  <h2>Contact Me</h2>
-  <p>📞 +91-7674960929</p>
-  <p>📧 durgamanikantayerubandi@gmail.com</p>
-</section>
+    <div class="skills-category">
+      <h3>Other</h3>
+      <div class="skills-container">
+        <div class="skill-card"><i class="fas fa-envelope"></i> Email/SMS Integration</div>
+        <div class="skill-card"><i class="fas fa-file-pdf"></i> PDF Generation</div>
+        <div class="skill-card"><i class="fas fa-plug"></i> APIs</div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 Durga Manikanta</p>
-</footer>
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <p>📞 +91-7674960929</p>
+    <p>📧 <a href="mailto:durgamanikantayerubandi@gmail.com">durgamanikantayerubandi@gmail.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/manikanta1109" target="_blank">linkedin.com/in/manikanta1109</a></p>
+  </section>
 
-<script src="script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Durga Manikanta | Built with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-</html>
+</html> 
