@@ -42,4 +42,4 @@ window.addEventListener("scroll", () => {
       el.classList.add("visible");
     }
   });
-}); 
+});
